@@ -1,0 +1,18 @@
+{% extends 'base2.html' %}
+{% block content %}
+    <title>Login - Vacationful</title>
+    {% load crispy_forms_tags %}
+<br>
+    <div class="container">
+    <div class="jumbotron">
+  <h1 class="text-center">Hello! Please Log In  </h1>
+  <h2 class="text-center" > Please Log In To Use Vacationful </h2>
+    </div>
+    </div>
+    <h3>{{ message }}</h3>
+<form method="POST" >
+      {% csrf_token %}
+      {{ form | crispy }}
+      <input type="submit" id="login-btn" >
+</form>
+{% endblock content %}

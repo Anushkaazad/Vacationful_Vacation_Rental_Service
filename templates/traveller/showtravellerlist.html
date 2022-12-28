@@ -1,0 +1,10 @@
+{% block content %}
+    <title>Traveller List - Vacationful</title>
+<h2> Show  Information </h2>
+
+  {% for info in bookinginfo %}
+   <p>
+    Property_name = {{ info.Property_name }}<br>
+   </p>
+{% endfor %}
+{% endblock content %}
